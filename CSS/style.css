@@ -63,6 +63,10 @@ body{
     color: #fff0f5;/*cuando pasamos mouse x arriba q cambie de color*/
 }
 
+.header .nav-links li a:active{
+    color: #fff0f5;/*cuando haya un enlace va a andar*/
+}
+
 .header .btn button{
     font-weight: 700;
     color: #1b3039;
@@ -77,4 +81,20 @@ body{
 .header .btn button:hover{
     background-color: #e2f1f8;
     transform: scale(1.1);
+}
+
+/*MEDIA QUERIES*/
+
+/*de 980px para abajo hace esto*/
+@media only screen and (max-width: 980px) {
+    .header{
+        padding: 5px 5%;
+    }
+}
+/*de 860 para abajo hacer el boton hamburguesa*/
+.hamburguesa {
+    display:none;
+}
+@media only screen and (max-width: 860){
+
 }
