@@ -1,3 +1,80 @@
-h1{
-    color:violet;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{/*margin y pading 0 porque ya viene con poco cada elemento*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    background-color:#ffffeb;
+}
+
+.header{/*usamos display flex para posicionar los elementos*/
+    background-color: #c0a0c3;
+    display: flex;
+    justify-content: space-between;/*posicionamos dejando el mismo espacio entre ellos en el eje horizontal*/
+    align-items: center;/*posicionamos en el centro en el eje vertical*/
+    height: 85px;
+    padding: 5px 10%;/*espacio entre contenido del elemento header y su borde, de 5px arriba y abajo y 10% izq y der*/
+}
+
+.header .logo{
+    cursor: pointer;/*si pasamos por el logo que se haga la manito*/
+}
+
+.header .logo img{
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;/*todos los cambios se deben hacer con una transicion de 0.3seg*/
+    /*sino la hace re brusca*/
+    border-radius: 50px;
+}
+
+.header .logo img:hover{
+    /*cuando pasamos el mouse por arriba de la imagen, se aplica una transoformacion que escala el tamaño del elemento
+    en un factor de 1.2, osea se agranda un 20%*/
+    transform: scale(1.2);
+}
+
+.header .nav-links{
+    list-style: none;/*le sacamos el estilo a la lista, que no aparezca con los puntitos*/
+}
+
+.header .nav-links li{
+    display: inline-block;/*como son elemento en bloque, los ponemos en linea*/
+    padding: 0 20px;  
+    transition: all 0.3s;
+}
+
+.header .nav-links li:hover{
+    transform: scale(1.1);
+}
+
+.header .nav-links a{
+    font-size: 700;
+    color: #1b3039;
+    text-decoration: none;/*le sacamos las lineas q aparecen default en los a*/    
+}
+
+.header .nav-links li a:hover{
+    color: #fff0f5;/*cuando pasamos mouse x arriba q cambie de color*/
+}
+
+.header .btn button{
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover{
+    background-color: #e2f1f8;
+    transform: scale(1.1);
 }
